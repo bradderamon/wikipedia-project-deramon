@@ -1,0 +1,341 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/* 
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;		
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #CDD0D4;
+	background-color: #CCCBD9;
+	background-image: url("../img/homepage-background.png"); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area. 
+	If you have more than one container, you are probably doing
+	something wrong. 	
+*/
+
+/*	Here is all the CSS for the home page.	*/
+
+.home-container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.home-header {
+	text-align: center;
+	height: 400px;
+}
+
+.home-header-image {
+	height: 300px;
+}
+
+.home-header h1 {
+	color: #FFD31E;
+	font-size: 100px;
+	line-height: 0px;
+	padding-top: 0.5em;
+}
+
+.home-pages {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding-left: 0em;
+	text-align: left;
+	background-color: /* #39393D */;
+}
+
+.about {
+	background-image: url("../img/act-title-1.png");
+	background-position: center;
+	grid-column: 1 / 2;
+}
+
+.gameplay {
+	background-image: url("../img/sonic-special-stage.png");
+	background-position: center;
+	grid-column: 2 / 3;
+}
+
+.story {
+	background-image: url("../img/character-select-sonic.png");
+	background-position: center;
+	grid-column: 3 / 4;
+}
+
+.development {
+	background-image: url("../img/1-1-sc-1.png");
+	background-position: center;
+	grid-column: 4 / 5;
+}
+
+.promotion {
+	background-image: url("../img/sonic-lifesavers.jpg");
+	background-position: right;
+	grid-column: 5 / 6;
+}
+
+.box-link {
+	display: block;
+	padding: 0.5em;
+}
+
+/*	This is the CSS for the sidebar and homepage header text.	*/
+
+.home-header h1 {
+	text-transform: uppercase;
+}
+
+.nav-header {
+	font-style: lighter;
+	text-align: center;
+	text-shadow: black 2px 2px 0px;
+}
+
+a {
+	color: #CDD0D4;
+	text-decoration: none;
+	padding: 0.5em;
+}
+
+.sidebar-index {
+	background-image: url("../img/s3&k-title.png");
+	background-position: center;
+}
+
+.sidebar-about {
+	background-image: url("../img/act-title-1.png");
+	background-position: center;
+}
+
+.sidebar-gameplay {
+	background-image: url("../img/sonic-special-stage.png");
+	background-position: center;
+}
+
+.sidebar-story {
+	background-image: url("../img/character-select-sonic.png");
+	background-position: center;
+}
+
+.sidebar-development {
+	background-image: url("../img/1-1-sc-1.png");
+	background-position: center;
+}
+
+.sidebar-promotion {
+	background-image: url("../img/sonic-lifesavers.jpg");
+	background-position: right;
+}
+
+/*	This is the CSS for all pages besides the home page.	*/
+
+.container {
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	width: 90%;
+	max-width: 1200px;
+	padding-left: 2em;
+	padding-right: 2em;
+	background-color: rgba(53, 99, 174, 0.6);
+}
+
+.global h1 {
+	color: #FFD31E;
+	font-size: 100px;
+	line-height: 0px;
+	padding-top: 0.5em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.subtitle {
+	color: #EE3331;
+	font-size: 2em;
+	font-style: bold;
+	text-shadow: black 2px 2px 0px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 40px;
+	padding: 2px;
+}
+
+.sidebar {
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+}
+
+/*.pagetext {
+	background-color: #3563AE;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+} */
+
+.text-grid {
+	grid-column: 2 / 5;
+}
+
+.sonic3 {
+	grid-column: 2 / 4;
+}
+
+.sonic3 h2 {
+	line-height: 0px;
+	margin-top: 0;
+}
+
+.sonic3 h3 {
+	line-height: 0px;
+	margin-top: 0;
+}
+
+.and-knuckles {
+	grid-column: 4 / 6;
+}
+
+.and-knuckles h2 {
+	line-height: 0px;
+	margin-top: 0;
+}
+
+.and-knuckles h3 {
+	line-height: 0px;
+	margin-top: 0;
+}
+
+.pagetitle {
+	grid-column: 2 / 3;
+	text-orientation: left;
+	margin-bottom: 0;
+}
+
+.pagetitle h2 {
+	line-height: 0px;
+}
+
+.lock-on {
+	grid-column: 2 / 6;
+}
+
+.sn-last-para {
+	margin-bottom: 0;
+}
+
+.chara-title {
+	grid-column: 2  / 3;
+	text-orientation: left;
+	margin-bottom: 0;
+}
+
+.chara-title h2 {
+	line-height: 0px;
+	margin-top: 0;
+}
+
+
+.sonic {
+	grid-column: 2 / 3;
+}
+
+.tails {
+	grid-column: 3 / 4;
+}
+
+.knuckles {
+	grid-column: 4 / 5;
+}
+
+.robotnik {
+	grid-column: 2 / 3;
+}
+
+.mecha {
+	grid-column: 3 / 4;
+}
+
+.videos {
+	grid-column: 2 / 6;
+}
+
+.reception {
+	grid-column: 2 / 5;
+}
+
+.ratings {
+	grid-column: 5 / 6;
+}
+
+.promotion-section {
+	grid-column: 2 / 5;
+}
+
+.lifesavers {
+	grid-column: 4 / 6;
+}
+
+.legacy {
+	grid-column: 2 / 4;
+}
+
+.re-releases {
+	grid-column: 4 / 6;
+}
+
+h3 {
+	font-family: 'Tienne', serif;
+}
+
+h2 {
+	text-align: left;
+	font-family: 'Tienne', serif;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	font-family: 'Quicksand', sans-serif;
+}
